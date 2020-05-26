@@ -1,0 +1,72 @@
+Author.delete_all
+Book.delete_all
+Category.delete_all
+User.delete_all
+Checkout.delete_all
+
+user1 = User.create(name: "Chase")
+user2 = User.create(name: "Carley")
+user3 = User.create(name: "Maizey")
+user4 = User.create(name: "Chip")
+
+category1 = Category.create(name: "Fiction")
+category2 = Category.create(name: "Memoir")
+category3 = Category.create(name: "Memoir")
+category4 = Category.create(name: "Fiction")
+category5 = Category.create(name: "Science Fiction")
+category6 = Category.create(name: "Education")
+category7 = Category.create(name: "Memoir")
+category8 = Category.create(name: "History")
+
+author1 = Author.create(name: "F Scott Fitzgerald")
+author2 = Author.create(name: "Hunter S Thompson")
+author3 = Author.create(name: "Charles Bukowski")
+author4 = Author.create(name: "Homer")
+author5 = Author.create(name: "Isaac Asimov")
+author6 = Author.create(name: "Carl Sagan")
+author7 = Author.create(name: "Anthony Bourdain")
+author8 = Author.create(name: "Howard Zinn")
+
+book1 = Book.create(title: "The Great Gatsby", author: author1, category: category1)
+book2 = Book.create(title: "Fear and Loathing in Las Vegas", author: author2, category: category2)
+book3 = Book.create(title: "Women", author: author3, category: category3)
+book4 = Book.create(title: "The Odyssey", author: author4, category: category4)
+book5 = Book.create(title: "I, Robot", author: author5, category: category5)
+book6 = Book.create(title: "Cosmos", author: author6, category: category6)
+book7 = Book.create(title: "Kitchen Confidential", author: author7, category: category7)
+book8 = Book.create(title: "History of the USA", author: author8, category: category8)
+
+checkout = Checkout.create(user: user1, book: book1, returned: true)
+checkout = Checkout.create(user: user1, book: book2, returned: false)
+checkout = Checkout.create(user: user1, book: book3, returned: true)
+checkout = Checkout.create(user: user1, book: book4, returned: false)
+checkout = Checkout.create(user: user1, book: book5, returned: false)
+checkout = Checkout.create(user: user1, book: book6, returned: true)
+checkout = Checkout.create(user: user1, book: book7, returned: true)
+checkout = Checkout.create(user: user1, book: book8, returned: false)
+
+checkout = Checkout.create(user: user2, book: book1, returned: true)
+checkout = Checkout.create(user: user2, book: book2, returned: false)
+checkout = Checkout.create(user: user2, book: book3, returned: true)
+checkout = Checkout.create(user: user2, book: book4, returned: false)
+checkout = Checkout.create(user: user2, book: book5, returned: false)
+checkout = Checkout.create(user: user2, book: book6, returned: true)
+checkout = Checkout.create(user: user2, book: book7, returned: true)
+checkout = Checkout.create(user: user2, book: book8, returned: false)
+
+checkout = Checkout.create(user: user3, book: book1, returned: true)
+checkout = Checkout.create(user: user3, book: book2, returned: false)
+checkout = Checkout.create(user: user3, book: book3, returned: true)
+checkout = Checkout.create(user: user3, book: book4, returned: false)
+checkout = Checkout.create(user: user3, book: book5, returned: false)
+checkout = Checkout.create(user: user3, book: book6, returned: true)
+checkout = Checkout.create(user: user3, book: book7, returned: true)
+checkout = Checkout.create(user: user3, book: book8, returned: false)
+
+checkout = Checkout.create(user: user4, book: book1, returned: false)
+checkout = Checkout.create(user: user4, book: book2, returned: true)
+checkout = Checkout.create(user: user4, book: book3, returned: false)
+checkout = Checkout.create(user: user4, book: book5, returned: true)
+checkout = Checkout.create(user: user4, book: book6, returned: false)
+checkout = Checkout.create(user: user4, book: book7, returned: false)
+checkout = Checkout.create(user: user4, book: book8, returned: true)
